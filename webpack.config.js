@@ -20,6 +20,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "img/",
+            },
+          },
+        ],
+      },
+      {
         test: /\.(scss)$/,
         use: [
           {
